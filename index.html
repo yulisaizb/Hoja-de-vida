@@ -3,106 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoja de Vida - Yuli Saiz</title>
+    <title>Un inicio de mi hoja de vida </title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
-        <div class="profile">
-            <img src="imagen/78.jpg" alt="Foto de perfil de Yuli Saiz">
-            <div>
-                <h1>Yuli Saiz</h1>
-                <p>Estudiante de desarrollo de software | Apasionada por la tecnología y el aprendizaje  me gusta aprender nuevas cosas.</p>
-            </div>
+        <div class="profile-container">
+            <img src="imagen/78.jpg" alt="Foto de perfil" class="profile-img">
+            <h1>Yuli Saiz Beltrán</h1>
+            <p class="profile-description">Soy una chica apasionada por aprender nuevas cosas y superarme profesionalmente </p>
         </div>
     </header>
 
     <main>
-        <section>
-            <h2>Educación</h2>
-            <ul>
-                <li>
-                    <strong>Tecnologo De Desarrollo De Software</strong> - Universidad  (2025 - Actualidad)
-                </li>
-                <li>
-                    <strong>Bachiller Académico</strong> - Colegio (2010 - 2019)
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Cursos Adicionales</h2>
-            <ul>
-                <li>
-                    <strong>Curso de belleza</strong> - Escuela (2022)
-                </li>
-                <li>
-                    <strong>curso belleza</strong> - Escuela (2022)
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Experiencia Laboral</h2>
-            <ul>
-                <li>
-                    <strong>Administradora</strong> - Soluciones contables (2021 - 2025)
-                    <ul>
-                        <li>Atención a usuarios y soluciones contables.</li>
-                        <li>Atencion al cliente.</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Practicante de Tecnoligía</strong> - universidad  (2024 -2025)
-                    <ul>
-                        <li>Aprendizaje de desarrolo de software.</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Habilidades</h2>
-            <ul class="skills">
-                <li>HTML</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>C++</li>
-                <li>Java</li>
-                <li>Administración</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Contacto</h2>
-            <p><i class="fa-solid fa-envelope"></i> yuli.saizb@uniagustiniana.edu.co</p>
-            <div class="social">
-                <a href="https://www.linkedin.com/in/yuli-saiz-212b83307/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/yulisaizb/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <section id="educacion">
+            <h2>Universidad</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Uniagustiniana</h3>
+                    <p class="degree">Tecnologo Desarrollo software</p>
+                    <p class="date">2024 - Año Actual</p>
+                </div>
             </div>
         </section>
 
-        <section>
-            <button id="thanksBtn">¡Haz clic aquí!</button>
+        <section id="cursos">
+            <h2>Cursos Adicionales</h2>
+            <div class="courses-grid">
+                <div class="course-item">
+                    <h3>Belleza</h3>
+                    <p>Escuela</p>
+                    <p class="date">2022</p>
+                </div>
+                <!-- Agrega más cursos -->
+            </div>
         </section>
 
-        <section>
-            <h2>Formulario de Contacto</h2>
-            <form id="contactForm" novalidate>
-                <input type="correo" id="yuli.saizb@uniagustiniana.edu.co" placeholder="yuli saiz" required>
-                <input type="yuli.saizbuniagustiniana.edu.co" id="correo" placeholder="Comunicate aqui" required>
-                <textarea id="visitame" placeholder="yulid.saiz" required></textarea>
-                <button type="submit">Enviar</button>
-                <p id="formMsg"></p>
-            </form>
+        <section id="experiencia">
+            <h2>Experiencia Laboral</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Administración</h3>
+                    <p class="company">together</p>
+                    <p class="date">2020 - Año actual </p>
+                    <ul class="responsibilities">
+                        <li>Universidad 1</li>
+                        <li>Mis mascotas 2</li>
+                        <li>Mi casa</li>
+                    </ul>
+                </div>
+                <!-- Agrega más experiencias -->
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <div class="skills-container">
+                <div class="skills-chart">
+                    <h3>Habilidades Técnicas</h3>
+                    <canvas id="technicalSkills"></canvas>
+                </div>
+                <div class="skills-chart">
+                    <h3>Habilidades Personales</h3>
+                    <canvas id="softSkills"></canvas>
+                </div>
+                <div class="skills-chart">
+                    <h3>Idiomas</h3>
+                    <canvas id="languages"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> yuli.saizb@uniagustiniana.edu.co</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/yuli-saiz-212b83307/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/yulisaizb" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <form id="contactForm" class="contact-form">
+                    <input type="text" id="name" placeholder="Nombre" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <textarea id="message" placeholder="Mensaje" required></textarea>
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Yuli Saiz</p>
+        <p>&copy; 2025 yuli saiz.   Hasta pronto </p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
